@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc AI - AI for Social Impact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-bg {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(circle at 100% 0%, rgba(13, 148, 136, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 0% 100%, rgba(67, 56, 202, 0.1) 0%, transparent 30%);
+        }
+        .gemini-loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #14b8a6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800">
+                Arc<span class="text-teal-600">AI</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-slate-600 hover:text-teal-600 transition-colors">About</a>
+                <a href="#approach" class="text-slate-600 hover:text-teal-600 transition-colors">Our Approach</a>
+                <a href="#projects" class="text-slate-600 hover:text-teal-600 transition-colors">Projects</a>
+                <a href="#ideator" class="text-slate-600 hover:text-teal-600 transition-colors">AI Ideator</a>
+                <a href="#contact" class="text-slate-600 hover:text-teal-600 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#about" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">About</a>
+            <a href="#approach" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Our Approach</a>
+            <a href="#projects" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Projects</a>
+            <a href="#ideator" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">AI Ideator</a>
+            <a href="#contact" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-800 leading-tight">
+                    Harnessing <span class="text-teal-600">AI</span> for <br class="hidden md:block" />Meaningful Social Impact
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-600">
+                    Arc AI is a dedicated initiative leveraging data science and artificial intelligence to address critical global challenges in climate, health, and sustainable development.
+                </p>
+                <div class="mt-10">
+                    <a href="#projects" class="bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Explore Our Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="pr-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">About Arc AI</h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            Founded on the principle that technology should serve humanity, Arc AI bridges the gap between advanced AI and real-world social problems. We are a collective of thinkers, developers, and policy experts dedicated to building data-driven solutions that are ethical, sustainable, and scalable. Our focus is on creating tangible tools that empower communities, improve governance, and foster a more equitable and sustainable world.
+                        </p>
+                    </div>
+                    <div>
+                         <svg class="w-full h-auto" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(13, 148, 136);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgb(67, 56, 202);stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="500" height="350" rx="20" fill="#f1f5f9"/>
+                            <path d="M 50 150 Q 150 50 250 150 T 450 150" stroke="url(#grad1)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.3"/>
+                            <path d="M 50 200 Q 150 300 250 200 T 450 200" stroke="url(#grad1)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.3"/>
+                            <circle cx="100" cy="120" r="15" fill="rgb(13, 148, 136)"/>
+                            <circle cx="250" cy="220" r="20" fill="rgb(67, 56, 202)"/>
+                            <circle cx="400" cy="100" r="10" fill="rgb(13, 148, 136)"/>
+                            <text x="250" y="185" font-family="Inter, sans-serif" font-size="30" fill="#334155" text-anchor="middle" font-weight="bold">AI for Good</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Approach Section -->
+        <section id="approach" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Our Approach: How AI Creates Social Tech</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-slate-600">
+                        Artificial Intelligence is more than just technology; it's a powerful tool for understanding complex problems and building scalable solutions. Here's how we leverage it.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Data-Driven Insights</h3>
+                        <p class="text-slate-600">AI allows us to analyze vast datasets—from satellite imagery to public surveys—to uncover hidden patterns and identify the root causes of social challenges, ensuring our interventions are targeted and effective.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Predictive Modeling</h3>
+                        <p class="text-slate-600">We build models that can forecast future trends, such as climate risks, disease outbreaks, or resource shortages. This enables proactive planning and early intervention by policymakers and communities.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-teal-700 mb-2">Accessible Tools</h3>
+                        <p class="text-slate-600">Our goal is to create user-friendly civic-tech platforms. AI powers the backend of these tools, making complex data accessible and empowering citizens and organizations to make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">AI for Impact Projects</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-slate-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x350/4338ca/ffffff?text=DigiAddress" class="w-full h-48 object-cover" alt="DigiAddress Project">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800">DigiAddress: Building Inclusive Cities</h3>
+                            <p class="mt-2 text-slate-600">Millions in informal settlements lack a formal address, barring them from essential services. DigiAddress uses AI and Plus Codes to generate unique digital addresses, making the invisible visible and ensuring every citizen can access their rights.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x350/16a34a/ffffff?text=NatureYatri" class="w-full h-48 object-cover" alt="NatureYatri Project">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-800">NatureYatri: Making Transportation Sustainable</h3>
+                            <p class="mt-2 text-slate-600">This platform helps users understand and compare the carbon emissions of different transport modes in Indian cities. By visualizing environmental impact, NatureYatri empowers citizens and policymakers to make informed, low-carbon travel decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gemini API Feature Section: AI for Good Ideator -->
+        <section id="ideator" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">AI for Good Ideator</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-slate-600">
+                        Spark your next social impact project. Select a domain and let our AI, powered by Gemini, generate a starting point for you.
+                    </p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="impact-area" class="block text-sm font-medium text-slate-700 mb-2">Choose an Impact Area:</label>
+                            <select id="impact-area" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                                <option>Climate Action & Sustainability</option>
+                                <option>Public Health & Well-being</option>
+                                <option>Education & Skill Development</option>
+                                <option>Economic Inequality & Poverty</option>
+                                <option>Gender Equality & Social Justice</option>
+                            </select>
+                        </div>
+                        <div>
+                             <label for="keywords" class="block text-sm font-medium text-slate-700 mb-2">Optional Keywords (e.g., rural India, mobile app):</label>
+                             <input type="text" id="keywords" placeholder="Enter keywords..." class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                        </div>
+                        <button id="generate-idea-btn" class="w-full bg-teal-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-teal-700 transition-all shadow-md hover:shadow-lg flex items-center justify-center text-lg">
+                            <span class="mr-2">✨</span> Generate Idea
+                        </button>
+                    </div>
+                    <div id="idea-result" class="mt-8 p-6 bg-slate-100 rounded-lg min-h-[150px] flex items-center justify-center text-slate-500 transition-all">
+                        Your AI-generated idea will appear here...
+                    </div>
+                     <p class="text-xs text-slate-400 text-center mt-4">Disclaimer: Ideas are generated by an AI model and should be used as a creative starting point.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Get Involved</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-slate-300">
+                    Whether you're a researcher, a policymaker, an organization, or a passionate individual, we'd love to explore collaboration. Get in touch with us to build a better future, together.
+                </p>
+                <div class="mt-8">
+                    <a href="mailto:Arcai.office@gmail.com" class="text-teal-400 text-lg font-semibold hover:text-teal-300 transition-colors">
+                        Arcai.office@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Arc AI. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Error Modal -->
+    <div id="error-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-sm w-full text-center">
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Oops!</h3>
+            <p id="error-message" class="text-slate-600 mb-6">Something went wrong. Please try again later.</p>
+            <button id="close-modal-btn" class="bg-slate-500 text-white px-6 py-2 rounded-lg hover:bg-slate-600 transition-colors">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Mobile menu toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Gemini API Feature: AI for Good Ideator ---
+        const generateBtn = document.getElementById('generate-idea-btn');
+        const ideaResultDiv = document.getElementById('idea-result');
+        const impactAreaSelect = document.getElementById('impact-area');
+        const keywordsInput = document.getElementById('keywords');
+        
+        // --- Modal Logic ---
+        const errorModal = document.getElementById('error-modal');
+        const errorMessage = document.getElementById('error-message');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        closeModalBtn.addEventListener('click', () => {
+            errorModal.classList.add('hidden');
+            errorModal.classList.remove('flex');
+        });
+
+        // --- Main Gemini API call logic ---
+        generateBtn.addEventListener('click', async () => {
+            const impactArea = impactAreaSelect.value;
+            const keywords = keywordsInput.value;
+            
+            // 1. Show loading state
+            ideaResultDiv.innerHTML = '<div class="gemini-loader"></div>';
+            generateBtn.disabled = true;
+            generateBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // 2. Construct the prompt for the Gemini API
+            let prompt = `Act as a social innovation strategist. Generate a concise and actionable project idea for a social impact initiative using AI. The focus area is "${impactArea}".`;
+            if (keywords.trim() !== '') {
+                prompt += ` Please incorporate these keywords: "${keywords}".`;
+            }
+            prompt += ` The idea should include a brief problem statement, a proposed AI-based solution, and the potential positive impact. Keep the total response under 150 words and format it as a single paragraph.`;
+
+            try {
+                // 3. Call the Gemini API
+                const apiKey = ""; // Canvas will provide the key
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const payload = {
+                    contents: [{
+                        role: "user",
+                        parts: [{ text: prompt }]
+                    }]
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                // 4. Process and display the result
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const ideaText = result.candidates[0].content.parts[0].text;
+                    ideaResultDiv.innerHTML = `<p class="text-slate-700 text-left">${ideaText.replace(/\n/g, '<br>')}</p>`;
+                } else {
+                    throw new Error("Received an invalid response from the API.");
+                }
+
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                // 5. Handle errors gracefully
+                errorMessage.textContent = "Sorry, we couldn't generate an idea right now. Please check your connection and try again later.";
+                errorModal.classList.remove('hidden');
+                errorModal.classList.add('flex');
+                ideaResultDiv.innerHTML = 'Failed to generate idea. Please try again.';
+            } finally {
+                // 6. Reset UI state
+                generateBtn.disabled = false;
+                generateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+    </script>
+
+</body>
+</html>
